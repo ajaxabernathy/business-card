@@ -1,5 +1,5 @@
 {
-  "name": "Ajax's Business Card",
+  "name": "satoshi",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/font": "^14.0.4",
     "98.css": "^0.1.20",
     "next": "13.5.5",
     "react": "^18",

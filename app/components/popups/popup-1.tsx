@@ -1,11 +1,23 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 export default function PopupOne(props: { style: Object }) {
   const [isOpen, setIsOpen] = useState(false);
 
+  setTimeout(() => {
+    console.log('Delayed for 3 second.');
+    setIsOpen(true);
+  }, 4000);
+
+  function handleClose() {
+    setIsOpen(false);
+  }
+
   const popup = (
-    <div style={props.style} className='window w-[500px] h-[350px] z-10'>
+    <div
+      style={props.style}
+      className='window w-[500px] h-[350px] z-10 select-none'
+    >
       <div className='title-bar'>
         <div className='title-bar-text'>
           WatchDog: The All-In-One Kubernetes Monitoring CLI
@@ -43,15 +55,6 @@ export default function PopupOne(props: { style: Object }) {
       </div>
     </div>
   );
-
-  setTimeout(() => {
-    console.log('Delayed for 3 second.');
-    setIsOpen(true);
-  }, 4000);
-
-  function handleClose() {
-    setIsOpen(false);
-  }
 
   return <>{isOpen ? popup : null}</>;
 }

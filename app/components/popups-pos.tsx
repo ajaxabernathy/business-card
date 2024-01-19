@@ -68,20 +68,3 @@ function PopupsPositioner() {
 }
 
 export default PopupsPositioner;
-
-// OLD USE EFFECT FOR GENERATING RANDOM POSITIONS ON INTERVAL
-// This functionality has been switched out for a loop to generate an array of position objects
-// The timing of rendering will be done in popup components with setTimeout()
-
-// useEffect(() => {
-// const updatePosition = () => {
-//   if (count < 3) setCount((prevCount) => (prevCount += 1));
-//   eval(`setPosition${count}(generateRandomPosition())`);
-// };
-// updatePosition(); // Set initial position
-// const interval = setInterval(updatePosition, 3000); // Update every 3000 ms
-// return () => clearInterval(interval);
-// for (let i = 0; i < 3; i++) {
-//   positions[i] = generateRandomPosition();
-// }
-// }, []);
