@@ -4,7 +4,7 @@ export default function PopupFour(props: { style: Object }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const popup = (
-    <div style={props.style} className='window w-[500px] h-[350px] z-40'>
+    <div style={props.style} className='window w-[500px] h-[350px] z-20'>
       <div className='title-bar'>
         <div className='title-bar-text'>Install WatchDog Today!</div>
         <div className='title-bar-controls'>
@@ -15,11 +15,33 @@ export default function PopupFour(props: { style: Object }) {
       </div>
       <div className='window-body'>
         <div className='w-full h-1/2 flex'>
-          <div className='flex items-center text-4xl font-bold text-lime-500 mt-8 mb-8'>
-            THIS IS POPUP FOUR!
+          <div className='flex items-center text-4xl font-bold text-red-500 mt-8 mb-8'>
+            HAVE YOU CHECKED OUT GETWATCHDOG.IO?
           </div>
         </div>
-        <div className='flex flex-col justify-center'></div>
+        <div className='flex flex-col justify-center'>
+          <div className='field-row'>
+            <input type='checkbox' id='example2' />
+            <label className='font-bold text-md' htmlFor='example2'>
+              I have learned more about WatchDog by clicking the button below!
+            </label>
+          </div>
+          <div className='field-row'>
+            <input disabled type='checkbox' id='example3' />
+            <label className='font-bold text-md' htmlFor='example3'>
+              I am not interested in WatchDog
+            </label>
+          </div>
+        </div>
+        <div className='flex items-center justify-center mt-12'>
+          <div className='flex items-center justify-center  '>
+            <button className='w-max'>
+              <a href='http://www.getwatchdog.io' target='_blank'>
+                Learn More
+              </a>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
